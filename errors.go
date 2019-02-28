@@ -18,7 +18,7 @@ type StatusError struct {
 	Details interface{} `json:"details,omitempty"`
 }
 
-// StatusError implements the error interface.
+// Error implements the error interface.
 func (e *StatusError) Error() string { return e.Message }
 
 // BUG(TODO): StatusError is too shallow, need to implement better error system with locale support.
