@@ -18,6 +18,7 @@ type Object struct {
 }
 
 func TestEncoder(t *testing.T) {
+t.Parallel()
 	var bb bytes.Buffer
 
 	xmlstr := []byte(`<?xml version="1.0" encoding="UTF-8"?>

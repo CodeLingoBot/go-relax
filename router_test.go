@@ -37,6 +37,7 @@ var testRequests = []struct {
 }
 
 func TestFindHandler(t *testing.T) {
+t.Parallel()
 	for i := range testRoutes {
 		testRouter.AddRoute(testRoutes[i].Method, testRoutes[i].Path, testHandler)
 	}
